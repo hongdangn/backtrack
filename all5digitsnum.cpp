@@ -15,7 +15,7 @@ void   printdigits(int num, int d[], int cnt)
         {
             d[i] = 1;
             printdigits(num*10 + i, d, cnt + 1);
-            d[i] = 0;
+            d[i] = 0; \\backtrack
         }
     }
     d[num] = 0;
