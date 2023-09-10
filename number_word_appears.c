@@ -29,10 +29,7 @@ int main() {
     }
     for(int i = tmp; i < strlen(s); i++)
     {
-        if(isalpha(s[i]))
-        {
-            word[start][++end] = s[i];
-        }
+        if(isalpha(s[i])) word[start][++end] = s[i];
         else if(isalpha(s[i]) == 0 && isalpha(s[i + 1]))
         {
             if(i < strlen(s) - 1)
@@ -41,6 +38,10 @@ int main() {
                 end = -1;
             }
         }
+    }
+    for(int i = 0; i <= start; i++)
+    {
+        printf("The number of times that the word %s appears is: %d \n", word[i], number_appears(word[i], s));
     }
     return 0;
 }
